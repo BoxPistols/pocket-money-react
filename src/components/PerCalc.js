@@ -21,10 +21,10 @@ export const PerCalc = () => {
   // const calcVal = () => setCalc((prev) => prev + 1);
 
   // リセット
-  // const reset = () => {
-  //   setVal(() => initVal);
-  //   setCalc(() => initCalc);
-  // };
+  const reset = () => {
+    setVal(() => initVal);
+    setCalc(() => initCalc);
+  };
 
   // 小数点
   const digit = 1;
