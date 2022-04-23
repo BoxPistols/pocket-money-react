@@ -24,7 +24,7 @@ export const PerCalc = () => {
   // const decrement = () => setCount((prevCount) => prevCount - 1);
 
   // 元の容量から比率を計算する
-  const initCalc = 1;
+  const initCalc = 0;
   const [calc, setCalc] = useState(initCalc);
   // const calcVal = () => setCalc((prev) => prev + 1);
 
