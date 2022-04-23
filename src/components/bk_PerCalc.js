@@ -3,14 +3,6 @@ import React, { useState } from 'react';
 export const PerCalc = () => {
   // const [ratio, setRatio] = useState(0);
 
-  // 小数点
-  const digitNum = 2;
-  // parseFloat(data.toFixed(digit)
-  const digitCalcNum = (_v) => {
-    // return parseFloat(_v.toFixed(digit));
-    return Math.floor(_v * Math.pow(10, digit)) / Math.pow(10, digit);
-  };
-
   // 元の容量
   const initVal = 0;
   const [val, setVal] = useState(initVal);
@@ -24,7 +16,7 @@ export const PerCalc = () => {
   // const decrement = () => setCount((prevCount) => prevCount - 1);
 
   // 元の容量から比率を計算する
-  const initCalc = 1;
+  const initCalc = 0;
   const [calc, setCalc] = useState(initCalc);
   // const calcVal = () => setCalc((prev) => prev + 1);
 
@@ -95,9 +87,9 @@ export const PerCalc = () => {
         <h3>入れるべき2液の重さは： {val ? digitCalc(ratio) : ''}g</h3>
       </section>
       {/* リセット */}
-      {/* <section>
+      <section>
         <button onClick={reset}>reset</button>
-      </section> */}
+      </section>
     </div>
   );
 };
