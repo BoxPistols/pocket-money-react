@@ -6,8 +6,8 @@ export const PerCalc = () => {
   // 元の容量
   const initVal = 0;
   const [val, setVal] = useState(initVal);
-  const add = () => setVal(() => parseInt(val) + parseInt(1));
-  const remove = () => setVal(() => parseInt(val) - parseInt(1));
+  const add = () => setVal(() => parseInt(val) + 1);
+  const remove = () => setVal(() => parseInt(val) - 1);
   // const setValue = () => setVal((prevVal) => e.target.value(prevVal));
 
   //　元容量の足し引き調整
@@ -29,13 +29,17 @@ export const PerCalc = () => {
   // 小数点
   const digit = 1;
   // parseFloat(data.toFixed(digit)
+  const digitCalc = (_v) => {
+    // return parseFloat(_v.toFixed(digit));
+    return Math.floor(_v * Math.pow(10, digit)) / Math.pow(10, digit);
+  };
 
   const num1 = parseInt(val);
   const num2 = parseInt(calc);
   // const ratio = Math.floor((num1 / 100) * num2);
   const ratio = (num1 / 100) * num2;
   // const total = num1 + num2;
-  const total = Math.floor(num1 + ratio);
+  const total = digitCalc(num1 + ratio);
 
   return (
     <div>
@@ -51,6 +55,7 @@ export const PerCalc = () => {
           }}
           value={val}
           placeholder={val}
+          step="0.1"
         />
         g ↑<button onClick={add}>1足す</button>
         <button onClick={remove}>1引く</button>↓
@@ -65,6 +70,7 @@ export const PerCalc = () => {
             setCalc(e.target.value);
           }}
           placeholder={calc}
+          step="0.1"
         />
       </section>
       {/* 基準 */}
@@ -77,9 +83,7 @@ export const PerCalc = () => {
         <h2>計算結果</h2>
         {/* <h3>入れるべき数値は： {val ? Math.floor(val / calc) : ''}g</h3> */}
         <h3>入れるべき1剤レジンの重さは： {val}g</h3>
-        <h3>
-          入れるべき2液の重さは： {val ? parseFloat(ratio.toFixed(digit)) : ''}g
-        </h3>
+        <h3>入れるべき2液の重さは： {val ? digitCalc(ratio) : ''}g</h3>
       </section>
       {/* リセット */}
       {/* <section>
