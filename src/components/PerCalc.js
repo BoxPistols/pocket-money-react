@@ -14,6 +14,7 @@ export const PerCalc = () => {
   // 元の容量
   const initVal = 0;
   const [val, setVal] = useState(initVal);
+  // const add = () => setVal(() => parseInt(val) + 1);
   const add = () => setVal(() => parseInt(val) + 1);
   const remove = () => setVal(() => parseInt(val) - 1);
   // const setValue = () => setVal((prevVal) => e.target.value(prevVal));
