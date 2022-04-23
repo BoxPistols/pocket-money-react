@@ -52,9 +52,8 @@ export const PerCalc = () => {
           value={val}
           placeholder={val}
         />
-        g ↑↓
-        <button onClick={add}>1足す</button>
-        <button onClick={remove}>1引く</button>
+        g ↑<button onClick={add}>1足す</button>
+        <button onClick={remove}>1引く</button>↓
         {/* <button onClick={decrement}>1引く</button> */}
       </section>
       <section>
@@ -77,10 +76,7 @@ export const PerCalc = () => {
       <section>
         <h2>計算結果</h2>
         {/* <h3>入れるべき数値は： {val ? Math.floor(val / calc) : ''}g</h3> */}
-        <h3>
-          入れるべき1剤レジンの重さは：{' '}
-          {val ? parseFloat(ratio.toFixed(digit)) : ''}g
-        </h3>
+        <h3>入れるべき1剤レジンの重さは： {val}g</h3>
         <h3>
           入れるべき2液の重さは： {val ? parseFloat(ratio.toFixed(digit)) : ''}g
         </h3>
