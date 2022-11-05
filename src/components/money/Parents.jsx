@@ -10,6 +10,8 @@ export const Parents = () => {
     return x - y;
   };
 
+  const money_result = money_calc(money_f, money_c);
+
   return (
     <div>
       <hr />
@@ -21,7 +23,7 @@ export const Parents = () => {
       </section>
       <section>
         <h2>夫のお小遣いから引いた結果</h2>
-        <p>今月の夫のお小遣い： {money_calc(money_f, money_c)}円</p>
+        <p>今月の夫のお小遣い： {money_result}円</p>
       </section>
     </div>
   );

@@ -55,7 +55,7 @@ export const PerCalc = () => {
       {/* 比率 */}
       <p>水を基準に1ml=1gを前提とする</p>
       <section>
-        <h2>1剤のレジンの重さは？</h2>
+        <h2>1剤の重さは？</h2>
         <input
           type="number"
           pattern="\d*"
@@ -91,7 +91,7 @@ export const PerCalc = () => {
       <section>
         <h2>計算結果</h2>
         {/* <h3>入れるべき数値は： {val ? Math.floor(val / calc) : ''}g</h3> */}
-        <h3>入れるべき1剤レジンの重さは： {val}g</h3>
+        <h3>入れるべき1剤の重さは： {val}g</h3>
         <h3>入れるべき2液の重さは： {val ? digitCalc(ratio) : ''}g</h3>
       </section>
       {/* リセット */}
